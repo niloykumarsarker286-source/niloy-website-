@@ -1,143 +1,98 @@
-
+index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Niloy | Portfolio</title>
+<title>Niloy Portfolio</title>
 
 <style>
 body {
     margin: 0;
     font-family: Arial;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
+    background: #0f172a;
     color: white;
-}
-
-/* HEADER */
-header {
     text-align: center;
-    padding: 30px;
 }
 
-/* CARD */
-.card {
-    width: 360px;
-    margin: auto;
-    background: #1e293b;
-    padding: 25px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 0 20px black;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-/* PROFILE IMAGE PLACEHOLDER */
+/* Profile Image */
 .profile-img {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    border: 3px solid #38bdf8;
-    object-fit: cover;
+    border: 4px solid #38bdf8;
+    margin-top: 20px;
 }
 
-/* NAME */
+/* Name */
 h1 {
-    color: #38bdf8;
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
-/* SECTION */
-.section {
-    width: 80%;
-    margin: 25px auto;
+/* Card */
+.card {
     background: #1e293b;
+    margin: 20px;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px black;
-    text-align: center;
+    border-radius: 12px;
 }
 
-/* SOCIAL BUTTONS */
-.social {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
-}
-
+/* Buttons */
 .btn {
     display: inline-block;
-    padding: 10px;
+    padding: 10px 20px;
+    margin: 8px;
     border-radius: 8px;
     text-decoration: none;
     color: white;
-    font-weight: bold;
+    transition: 0.3s;
 }
 
-/* COLORS */
 .fb { background: #1877f2; }
 .ig { background: #e1306c; }
 .wa { background: #25d366; }
 
 .btn:hover {
-    opacity: 0.8;
+    transform: scale(1.1);
 }
 
+/* Animation */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.card {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Mobile Responsive */
+@media(max-width: 600px) {
+    h1 { font-size: 22px; }
+    .card { margin: 10px; }
+}
 </style>
+
 </head>
 
 <body>
 
-<header>
-    <h2>My Portfolio Website</h2>
-</header>
+<img src="your-photo.jpg" class="profile-img">
 
-<!-- PROFILE -->
+<h1>Niloy Kumar Sarker</h1>
+<p>CST Student | Kurigram Polytechnic Institute</p>
+
 <div class="card">
-
-    <!-- 🔴 PHOTO (ADD LATER) -->
-    <img src="your-photo.jpg" class="profile-img" alt="Niloy">
-
-    <h1>Niloy Kumar Sarker</h1>
-    <p>CST Student | Kurigram Polytechnic Institute</p>
-</div>
-
-<!-- ABOUT -->
-<div class="section">
     <h2>About Me</h2>
-    <p>
-        I am Niloy, a student of Kurigram Polytechnic Institute.  
-        Department: CST. I am learning Web Development & Programming.
-    </p>
+    <p>I am learning Web Development & Programming.</p>
 </div>
 
-<!-- SOCIAL MEDIA -->
-<div class="section">
+<div class="card">
     <h2>Connect With Me</h2>
 
-    <div class="social">
-
-        <!-- FACEBOOK -->
-        <a class="btn fb" href="https://www.facebook.com/share/1DQX18DX6M/?mibextid=wwXIfr" target="_blank">
-            Facebook Profile
-        </a>
-
-        <!-- INSTAGRAM -->
-        <a class="btn ig" href="https://www.instagram.com/niloy_sarker_36?igsh=eHFyM2UwamNqcHFy&utm_source=qr" target="_blank">
-            Instagram Profile
-        </a>
-
-        <!-- WHATSAPP -->
-        <a class="btn wa" href="https://wa.me/8801300141286" target="_blank">
-            WhatsApp Me
-        </a>
-
-    </div>
+    <a class="btn fb" href="https://facebook.com/">Facebook</a>
+    <a class="btn ig" href="https://instagram.com/">Instagram</a>
+    <a class="btn wa" href="https://wa.me/8801300141286">WhatsApp</a>
 </div>
 
 </body>
